@@ -1,35 +1,41 @@
 # AI Tools Hub - Content Site Specification
 
-## Concept
-Curated directory of AI tools, productivity apps, and tech resources. Monetize via affiliate links + ads.
+## Overview
+
+Curated directory of AI tools, productivity apps, and tech resources. Monetize via affiliate links and ads.
 
 ## Features
-1. **Tool Listings** - Categorized AI tools with descriptions, pricing, links
-2. **Weekly Newsletter** - Curated picks (optional, later)
-3. **Reviews** - In-depth tool reviews
-4. **Categories** - AI Writing, Image Gen, Video, Audio, Productivity, Dev Tools
+
+1. **Tool Listings** — Categorized AI tools with descriptions, pricing, links
+2. **Search & Filter** — Find tools by name, category, or tag
+3. **Newsletter** — Weekly curated picks (optional)
+4. **Reviews** — In-depth tool reviews (future)
+
+## Categories
+
+- AI Writing (ChatGPT, Claude, Jasper, Copy.ai)
+- Image Generation (Midjourney, DALL-E, Stable Diffusion)
+- Video (Runway, Pictory, Descript)
+- Audio (ElevenLabs, Murf, WellSaid)
+- Productivity (Notion AI, Canva AI)
+- Dev Tools (GitHub Copilot, Cursor, Replit AI)
 
 ## Tech Stack
-- Static site (Astro or Hugo) - fast, SEO-friendly
-- Or simple HTML/CSS/JS if preferred
+
+- Static HTML/CSS/JS (no framework)
 - Host on Vercel/Netlify (free)
 
 ## Monetization
-- Affiliate links (Amazon, software affiliates)
-- Ad revenue (AdSense after traffic)
-- Sponsored listings
 
-## Initial Content (20+ tools)
-- AI Writing: ChatGPT, Claude, Jasper, Copy.ai
-- Image: Midjourney, DALL-E, Stable Diffusion
-- Video: Runway, Pictory, Descript
-- Audio: ElevenLabs, Murf, WellSaid
-- Productivity: Notion AI, Slack AI, Canva AI
-- Dev: GitHub Copilot, Cursor, Replit AI
+- **Affiliate links** — Earn commission on tool signups
+- **Ad revenue** — AdSense after traffic grows
+- **Sponsored listings** — Featured tool placements
 
 ## Tasks
-- [ ] Set up site structure
-- [ ] Add initial tool listings
-- [ ] Set up analytics (optional)
-- [ ] Apply for affiliate programs
+
+- [x] Set up site structure
+- [x] Add initial tool listings (20+ tools)
 - [ ] Deploy to Vercel/Netlify
+- [ ] Apply for affiliate programs
+- [ ] Add analytics
+- [ ] Set up Google AdSense

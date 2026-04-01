@@ -4,29 +4,70 @@
 **Category:** Developer Tools  
 **Tags:** python, automation, scripts, productivity
 
-## Description
+---
 
-Boost your productivity with 10 ready-to-use Python scripts. Save hours of manual work.
+## What is this product?
 
-### Scripts Included:
-1. **File Organizer** - Auto-sort files by type into folders
-2. **Image Resizer** - Batch resize with width/height/scale options
-3. **CSV Cleaner** - Remove duplicates, merge CSVs
-4. **Screenshot Tool** - Capture screenshots from CLI
-5. **URL Extractor** - Pull all URLs from any text/HTML file
-6. **Folder Sync** - Mirror folders like rsync
-7. **PDF Page Counter** - Count pages in bulk PDFs
-8. **Text to Speech** - Convert text to audio
-9. **Duplicate Finder** - Find dupes by hash
-10. **Batch Renamer** - Rename with regex patterns
+A collection of 10 production-ready Python scripts that automate common tasks. Save hours of manual work with these tools.
 
-### Requirements
-- Python 3.8+
-- See `requirements.txt`
+## Who is this for?
 
-### Support
-Email: your@email.com
+- Developers who want to automate repetitive tasks
+- Designers managing large file collections
+- Anyone who works with files, images, or data regularly
+- Non-programmers who want to simplify their workflow
+
+## What will you achieve?
+
+After using these scripts, you will:
+- Automatically organize messy folders in seconds
+- Resize hundreds of images with one command
+- Clean and merge CSV files without manual editing
+- Extract URLs from any text or web page
+- Find and remove duplicate files
+- And more...
+
+## What's included
+
+| Script | Description |
+|--------|-------------|
+| File Organizer | Auto-sort files into folders by type |
+| Image Resizer | Batch resize with width/height/scale options |
+| CSV Cleaner | Remove duplicates, merge CSVs |
+| Screenshot Tool | Capture screenshots from CLI |
+| URL Extractor | Pull all URLs from any file |
+| Folder Sync | Mirror folders like rsync |
+| PDF Page Counter | Count pages in bulk PDFs |
+| Text to Speech | Convert text to audio |
+| Duplicate Finder | Find duplicates by hash |
+| Batch Renamer | Rename with regex patterns |
+
+## Requirements
+
+- Python 3.8 or higher
+- See `requirements.txt` for dependencies
+
+## How to use
+
+1. Download the ZIP package
+2. Extract to your preferred location
+3. Run scripts from terminal:
+   ```bash
+   python script_name.py [arguments]
+   ```
+
+See `README.md` for detailed documentation.
+
+## Pricing
+
+**$19 one-time payment**
+
+- Instant download after purchase
+- Lifetime access to updates
+- Personal use license
 
 ---
 
 *Personal use only. Reselling or redistribution prohibited.*
+
+**Support:** your@email.com

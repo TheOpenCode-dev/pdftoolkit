@@ -36,7 +36,7 @@ def sync_folders(source, dest, delete=False):
         # Check if needs copy
         needs_copy = True
         if dst_file.exists():
-            if get_file_hash(file) == get_file_hash(dst_file):
+            if get_hash(file) == get_hash(dst_file):
                 needs_copy = False
         
         if needs_copy:

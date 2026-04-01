@@ -35,8 +35,8 @@ if __name__ == '__main__':
     parser.add_argument('folder', help='Folder with files')
     parser.add_argument('--pattern', '-p', default='(.*)', help='Regex pattern (default: (.*))')
     parser.add_argument('--replace', '-r', default='\\1', help='Replacement')
-    parser.add_argument('--prefix', help='Add prefix')
-    parser.add_argument('--suffix', help='Add suffix')
+    parser.add_argument('--prefix', default='', help='Add prefix')
+    parser.add_argument('--suffix', default='', help='Add suffix')
     parser.add_argument('--sequential', '-s', action='store_true', help='Sequential numbering')
     args = parser.parse_args()
     

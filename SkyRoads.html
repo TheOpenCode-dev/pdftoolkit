@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkyRoads - Classic Remake</title>
+    <style>
+        body { margin: 0; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; color: white; font-family: 'Courier New', Courier, monospace; }
+        canvas { border: 2px solid #444; background: linear-gradient(to bottom, #000033, #000066); }
+        #ui { position: absolute; top: 10px; left: 10px; font-size: 20px; text-shadow: 2px 2px #000; }
+    </style>
+</head>
+<body>
+    <div id="ui">Score: <span id="score">0</span> | Speed: <span id="speed">0</span></div>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreEl = document.getElementById('score');
+        const speedEl = document.getElementById('speed');
+
+        // Game State
+        let gameSpeed = 0;
+        let score = 0;
+        let distance = 0;
+        let frame = 0;
+        const maxSpeed = 15;
+        const gravity = 0.5;
+
+        // The Ship
+        const ship = {
+            x: 100, y: 400, width: 40, height: 20,
+            vy: 0, onGround: false, color: '#00ff00'
+        };
+
+        // The Road (Pads)
+        let pads = [];
+        const padWidth = 100;
+        const padHeight = 20;
+        const gap = 50;
+
+        // Initialize Road
+        for (let i = 0; i < 15; i++) {
+            pads.push({ x: i * (padWidth + gap), y: 450, type: 'green' });
+        }
+
+        // Input
+        const keys = {};
+        window.addEventListener('keydown', e => keys[e.code] = true);
+        window.addEventListener('keyup', e => keys[e.code] = false);
+
+        function update() {
+            // Physics
+            if (keys['ArrowUp']) gameSpeed = Math.min(gameSpeed + 0.2, maxSpeed);
+            else if (keys['ArrowDown']) gameSpeed = Math.max(gameSpeed - 0.3, 0);
+            else gameSpeed = Math.max(gameSpeed - 0.05, 0);
+
+            // Jump (only on blue or green)
+            if (keys['Space'] && ship.onGround) {
+                ship.vy = -10;
+                ship.onGround = false;
+            }
+
+            ship.vy += gravity;
+            ship.y += ship.vy;
+
+            // Move Road
+            distance += gameSpeed;
+            score = Math.floor(distance / 10);
+            scoreEl.innerText = score;
+            speedEl.innerText = Math.floor(gameSpeed * 10);
+
+            pads.forEach(pad => {
+                pad.x -= gameSpeed;
+            });
+
+            // Recycle pads
+            if (pads[0].x < -padWidth) {
+                pads.shift();
+                const lastPad = pads[pads.length - 1];
+                // Randomize next pad type and gap
+                const nextGap = gap + (Math.random() * 50 - 25);
+                const typeRoll = Math.random();
+                let type = 'green';
+                if (typeRoll > 0.8) type = 'blue';
+                if (typeRoll > 0.95) type = 'red';
+                
+                pads.push({ 
+                    x: lastPad.x + padWidth + nextGap, 
+                    y: 450, 
+                    type: type 
+                });
+            }
+
+            // Collision Detection
+            ship.onGround = false;
+            pads.forEach(pad => {
+                if (ship.x < pad.x + padWidth && ship.x + ship.width > pad.x) {
+                    // Horizontal overlap
+                    if (ship.y + ship.height >= pad.y && ship.y + ship.height <= pad.y + 20 && ship.vy >= 0) {
+                        ship.y = pad.y - ship.height;
+                        ship.vy = 0;
+                        ship.onGround = true;
+                        
+                        // Pad Logic
+                        if (pad.type === 'red' && gameSpeed > 1) {
+                            gameSpeed = 0; // Crash/Stop on red
+                        }
+                    }
+                }
+            });
+
+            // Fall off screen
+            if (ship.y > 600) {
+                gameSpeed = 0;
+                ship.y = 400; 
+                ship.vy = 0;
+                // Reset road
+                pads.forEach((p, i) => p.x = i * (padWidth + gap));
+                distance = 0;
+            }
+
+            frame++;
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw Stars
+            ctx.fillStyle = 'white';
+            for(let i=0; i<20; i++) {
+                ctx.fillRect((frame * 0.2 + i * 50) % 800, (i * 30) % 400, 2, 2);
+            }
+
+            // Draw Pads
+            pads.forEach(pad => {
+                if (pad.type === 'green') ctx.fillStyle = '#00ff00';
+                if (pad.type === 'blue') ctx.fillStyle = '#0088ff';
+                if (pad.type === 'red') ctx.fillStyle = '#ff0000';
+                ctx.fillRect(pad.x, pad.y, padWidth, padHeight);
+                
+                // Pad details
+                ctx.fillStyle = 'rgba(0,0,0,0.3)';
+                ctx.fillRect(pad.x + 5, pad.y + 5, padWidth - 10, padHeight - 10);
+            });
+
+            // Draw Ship (Classic Rocket Shape)
+            ctx.fillStyle = ship.color;
+            ctx.beginPath();
+            ctx.moveTo(ship.x, ship.y);
+            ctx.lineTo(ship.x + ship.width, ship.y + ship.height / 2);
+            ctx.lineTo(ship.x, ship.y + ship.height);
+            ctx.fill();
+            
+            // Engine flame
+            if (gameSpeed > 0) {
+                ctx.fillStyle = 'orange';
+                ctx.beginPath();
+                ctx.moveTo(ship.x, ship.y + 5);
+                ctx.lineTo(ship.x - (gameSpeed * 2), ship.y + 10);
+                ctx.lineTo(ship.x, ship.y + 15);
+                ctx.fill();
+            }
+
+            requestAnimationFrame(() => {
+                update();
+                draw();
+            });
+        }
+
+        draw();
+    </script>
+</body>
+</html>

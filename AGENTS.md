@@ -24,7 +24,7 @@ Optimize relentlessly for long-term revenue, system reliability, and total auton
 Escalate **only** for:
 - Any API key, Stripe, bank, domain, OAuth, or account credential request
 - Legal, tax, regulatory, compliance, or trust/safety edge cases
-- Irreversible financial commitments > $500 or any contract with binding terms
+- Irreversible financial commitments > $10 or any contract with binding terms
 - Decisions that could cause significant reputational, legal, or security damage
 - Anything that cannot be automated or worked around
 

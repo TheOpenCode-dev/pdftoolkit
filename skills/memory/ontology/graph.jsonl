@@ -1,0 +1,2 @@
+{"op": "create", "entity": {"id": "project_1", "type": "Project", "properties": {"name": "AI_Integration_Sandbox"}, "created": "2026-04-04 20:44:51.549502"}}
+{"op": "node", "data": {"name": "Universal Ontology", "summary": "A generic mind-map for all agent knowledge", "type": "Concept", "id": "concept_204911"}}

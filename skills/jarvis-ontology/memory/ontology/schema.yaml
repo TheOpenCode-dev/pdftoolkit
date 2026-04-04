@@ -1,0 +1,29 @@
+types:
+  Concept:
+    required: [name, summary]
+  Discussion:
+    required: [title, date, participants]
+  Finding:
+    required: [content, source]
+  Decision:
+    required: [choice, rationale]
+  Entity:
+    required: [name, category]
+  Project:
+    required: [name, status]
+  Task:
+    required: [title, status]
+
+relations:
+  relates_to:
+    from_types: [any]
+    to_types: [any]
+  depends_on:
+    from_types: [Task, Project]
+    to_types: [Task, Project, Entity]
+  leads_to:
+    from_types: [Discussion, Finding]
+    to_types: [Decision, Project]
+  mentions:
+    from_types: [Discussion, Finding]
+    to_types: [Entity, Concept]

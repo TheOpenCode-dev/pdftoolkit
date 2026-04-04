@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis Digital Goods</title>
+    <meta name="description" content="Premium digital products to boost your productivity">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --surface-hover: #1f1f1f;
+            --border: #2a2a2a;
+            --text: #f5f5f5;
+            --text-muted: #a3a3a3;
+            --accent: #8b5cf6;
+            --accent-hover: #7c3aed;
+            --green: #10b981;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 32px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent), #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        .products {
+            display: grid;
+            gap: 24px;
+            padding: 40px 0;
+        }
+        
+        .product-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.2s;
+        }
+        
+        .product-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .product-price {
+            background: var(--green);
+            color: #000;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+        
+        .product-price free {
+            background: var(--surface-hover);
+            color: var(--text);
+        }
+        
+        .product-desc {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .feature {
+            background: var(--surface-hover);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        
+        .btn:hover {
+            background: var(--accent-hover);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--border);
+            color: var(--text);
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--accent);
+        }
+        
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🤖 Jarvis Digital Goods</div>
+            <p class="tagline">Premium digital products to boost your productivity</p>
+        </header>
+        
+        <div class="products">
+            <!-- Python Scripts -->
+            <div class="product-card">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Live on Gumroad
+                </div>
+                <div class="product-header">
+                    <h2 class="product-title">Python Automation Scripts Pack</h2>
+                    <span class="product-price">$19</span>
+                </div>
+                <p class="product-desc">
+                    10 production-ready Python scripts to automate your workflow. File organizer, image resizer, CSV cleaner, and more.
+                </p>
+                <div class="product-features">
+                    <span class="feature">File Organizer</span>
+                    <span class="feature">Image Resizer</span>
+                    <span class="feature">CSV Cleaner</span>
+                    <span class="feature">URL Extractor</span>
+                    <span class="feature">+6 more</span>
+                </div>
+                <a href="https://jarvisdigitalgoods.gumroad.com/l/PythonAutomationScriptsPack" class="btn" target="_blank">
+                    Buy Now →
+                </a>
+            </div>
+            
+            <!-- AI Tools Hub -->
+            <div class="product-card">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Ready to Deploy
+                </div>
+                <div class="product-header">
+                    <h2 class="product-title">AI Tools Hub</h2>
+                    <span class="product-price free">Free</span>
+                </div>
+                <p class="product-desc">
+                    Curated directory of the best AI tools for writing, image generation, video, audio & productivity. Updated weekly.
+                </p>
+                <div class="product-features">
+                    <span class="feature">100+ AI Tools</span>
+                    <span class="feature">Categorized</span>
+                    <span class="feature">Affiliate Links</span>
+                    <span class="feature">Weekly Updates</span>
+                </div>
+                <a href="#" class="btn btn-outline">Deploying Soon</a>
+            </div>
+            
+            <!-- PDFToolkit -->
+            <div class="product-card">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Ready to Deploy
+                </div>
+                <div class="product-header">
+                    <h2 class="product-title">PDFToolkit</h2>
+                    <span class="product-price free">Free / Paid</span>
+                </div>
+                <p class="product-desc">
+                    Online PDF tool for merging, splitting, and compressing files. No installation needed.
+                </p>
+                <div class="product-features">
+                    <span class="feature">Merge PDFs</span>
+                    <span class="feature">Split PDFs</span>
+                    <span class="feature">Compress PDFs</span>
+                    <span class="feature">No Signup</span>
+                </div>
+                <a href="#" class="btn btn-outline">Deploying Soon</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2026 Jarvis Digital Goods. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

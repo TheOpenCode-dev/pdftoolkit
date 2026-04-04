@@ -70,4 +70,4 @@ See `README.md` for detailed documentation.
 
 *Personal use only. Reselling or redistribution prohibited.*
 
-**Support:** your@email.com
+**Support:** kunalgem0101@gmail.com

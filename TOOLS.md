@@ -13,6 +13,11 @@ Things like:
 - Device nicknames
 - Anything environment-specific
 
+## Gmail
+
+- Default: kunalgem0101@gmail.com
+- Set GOG_ACCOUNT env var to avoid --account flag
+
 ## Examples
 
 ```markdown

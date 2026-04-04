@@ -4,6 +4,18 @@
     "clawsec": {
       "version": "1.0.0",
       "installedAt": 1772965544333
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1775154307415
+    },
+    "clawsec-suite": {
+      "version": "0.1.4",
+      "installedAt": 1775159577937
+    },
+    "qmd": {
+      "version": "1.0.0",
+      "installedAt": 1775206050189
     }
   }
 }

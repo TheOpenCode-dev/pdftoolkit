@@ -1,6 +1,6 @@
 # OpenAI Ads Revenue Model: Comprehensive Analysis & Monetization Strategy
 
-**Generated:** April 2, 2026 | **For:** Jarvis Digital Goods
+**Generated:** April 2, 2026 | **Last Updated:** April 5, 2026 | **For:** Jarvis Digital Goods
 
 ---
 
@@ -11,6 +11,14 @@ OpenAI has officially entered the advertising space. This document provides a co
 ---
 
 ## Part 1: Understanding OpenAI's Ad Model
+
+### Latest News (April 2026)
+
+- **ChatGPT Ads Rolling Out to Free & Go Users in US** - OpenAI confirmed plans to introduce ads to all free and ChatGPT Go users in the United States
+- **Pilot Exceeds $100M in 6 Weeks** - OpenAI's US ad pilot exceeded $100 million in annualized revenue in just six weeks (Reuters, March 26)
+- **Smartly.io Partnership** - OpenAI partnered with Smartly to create interactive, conversational ads inside ChatGPT
+- **Internal Backlash** - Multiple researchers quit over concerns about the "Facebook path" - ads compromising user experience
+- **Ad Quality Concerns** - Advertisers in pilot reported lack of ROI proof (Search Engine Land, March 23)
 
 ### What Happened
 
@@ -126,6 +134,13 @@ AI ads: User has conversation → AI recommends products/services organically
 - [ ] Complete first course module
 - [ ] Build MVP of ranking checker tool
 - [ ] Get first 3 paying clients
+
+### Updated Insights (April 5)
+
+- **Revenue validation** - $100M annualized in 6 weeks proves AI ads are a viable revenue stream
+- ** advertiser pain points** - No ROI proof is a major concern; opportunity for analytics/verification tools
+- **Internal resistance** - Researcher departures signal potential policy shifts; monitor closely
+- **Competitive landscape** - Smartly.io partnership indicates platform-adjacent tools will be needed
 
 ### This Quarter
 

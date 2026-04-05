@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But keep skill folders
+!skills/
+skills/*/
+
+# Only keep SKILL.md files
+!skills/**/SKILL.md
+
+# Keep gitignore
+!.gitignore

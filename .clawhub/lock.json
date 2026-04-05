@@ -16,6 +16,14 @@
     "qmd": {
       "version": "1.0.0",
       "installedAt": 1775206050189
+    },
+    "ontology": {
+      "version": "1.0.4",
+      "installedAt": 1775336151354
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1775336168807
     }
   }
 }

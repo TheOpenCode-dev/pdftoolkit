@@ -8,5 +8,6 @@ skills/*/
 # Only keep SKILL.md files
 !skills/**/SKILL.md
 
-# Keep gitignore
+# Keep gitignore and backup-snapshot
 !.gitignore
+!backup-snapshot/
